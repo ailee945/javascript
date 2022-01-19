@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // 创建一个构造函数
+      function Person(name, age) {
+        this.name = name;
+        this.age = age;
+      }
+
+      // 创建构造函数实例
+      var p0 = new Person('a', 16);
+      var p1 = new Person('b', 17);
+      var p2 = new Person('c', 18);
+      var p3 = new Person('d', 19);
+
+      // 创建人数组
+      var p = [p0, p1, p2, p3];
+
+      // 筛选成年人
+      function getAdult(arr) {
+        var newArr = [];
+        for (var i = 0; i < arr.length; i++) {
+          if (arr[i].age >= 18) {
+            newArr.push(arr[i]);
+          }
+        }
+        return newArr;
+      }
+
+      console.log(getAdult(p));
+
+      // forEach() 遍历数组
+      p.forEach(function (_, index) {
+        console.log(index);
+      });
+    </script>
+  </head>
+  <body></body>
+</html>

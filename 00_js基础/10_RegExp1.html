@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var a = 'hello abc hello adc aec';
+      var b = 'hello hello adc aec';
+      var res = a.search(/a[bde]c/);
+      var res2 = b.search(/a[bde]c/);
+      console.log(res);
+      console.log(res2);
+
+      var str = '1a2b3c4d5e6f';
+      var res3 = str.match(/[A-z]/gi); // 返回的是一个数组
+      var res4 = str.match(/[A-z]/gi);
+      var res5 = str.match(/[A-z]/gi).join(','); // 链式编程
+      console.log(res3); // [a, b, d, e, f]
+      console.log(res4); // [a, b, d, e, f]
+      console.log(res5); // a, b, c, d, f
+    </script>
+  </head>
+  <body></body>
+</html>

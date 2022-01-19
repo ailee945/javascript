@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 这里面注意输入的数字必须是0-100
+    var score = prompt('请输入小明的期末成绩（0-100）', 99)
+    // 先判断输入的值是否合法 1、数字 2、字符串
+    if (score > 100 || score < 0 || isNaN(score)) {
+      alert('输入的值不合法')
+    } else {
+      if (score == 100) {
+        alert('奖励一台BMW')
+      } else if (score >= 80) {
+        alert('奖励一台iPhone 13')
+      } else if (score >= 60) {
+        alert('奖励一本参考书')
+      } else {
+        alert('奖励个锤子')
+      }
+    }
+  </script>
+
+  <script>
+    var height = prompt('请输入你的身高（cm）');
+    var money = prompt('请输入你的财富（万）');
+    var face = prompt('请输入你的颜值');
+    if (height > 180 && money > 500 && face > 59) {
+      alert('嫁了')
+    } else if (height > 180 || money > 500 || face > 59) {
+      alert('比上不足比下有余')
+    } else {
+      alert('不嫁')
+    }
+  </script>
+
+  <script>
+    // prompt函数的返回值是string
+    // var num1 = +prompt('number1')
+    // var num2 = +prompt('number2')
+    // var num3 = +prompt('number3')
+  </script>
+</body>
+
+</html>

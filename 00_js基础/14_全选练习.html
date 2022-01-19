@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      window.onload = function () {
+        var checkAllBtn = document.getElementById('checkAllBtn');
+        var checkNoBtn = document.getElementById('checkNoBtn');
+        var checkRevtn = document.getElementById('checkRevtn');
+        var sendBtn = document.getElementById('sendBtn');
+        var items = document.getElementsByName('items');
+        // 全选按钮，点击按钮全部选中
+        checkAllBtn.onclick = function () {
+          for (var i = 0; i < items.length; i++) {
+            items[i].checked = true;
+          }
+        };
+        // 全不选按钮
+        checkNoBtn.onclick = function () {
+          for (var i = 0; i < items.length; i++) {
+            items[i].checked = false;
+          }
+        };
+        // 反选按钮
+        checkRevtn.onclick = function () {
+          for (var i = 0; i < items.length; i++) {
+            items[i].checked = !items[i].checked;
+          }
+        };
+        // 提交按钮
+        sendBtn.onclick = function () {
+          for (var i = 0; i < items.length; i++) {
+            if (items[i].checked) {
+              alert(items[i].value);
+            }
+          }
+        };
+        // 全选全不选Box
+      };
+    </script>
+  </head>
+  <body>
+    <form action="">
+      你爱好的运动是？<input type="checkbox" /> 全选/全不选<br />
+      <input type="checkbox" name="items" value="足球" />足球
+      <input type="checkbox" name="items" value="篮球" />篮球
+      <input type="checkbox" name="items" value="羽毛球" />羽毛球
+      <input type="checkbox" name="items" value="乒乓球" />乒乓球
+      <br />
+      <input type="button" id="checkAllBtn" value="全选" />
+      <input type="button" id="checkNoBtn" value="全不选" />
+      <input type="button" id="checkRevtn" value="反选" />
+      <input type="button" id="sendBtn" value="提交" />
+    </form>
+  </body>
+</html>

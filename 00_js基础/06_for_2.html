@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // 打印九九乘法表
+      for (var i = 1; i <= 9; i++) {
+        for (var j = 1; j <= i; j++) {
+          document.write('<span>' + j + '*' + i + '=' + j * i + '</span>');
+        }
+        document.write('<br />');
+      }
+      // 输出1-100之间所有的质数
+      console.time('test');
+      for (var i = 2; i <= 20000; i++) {
+        var flag = true;
+        for (var j = 2; j < Math.sqrt(i); j++) {
+          if (i % j == 0) {
+            // 进入该分支则说明不是质数
+            flag = false;
+            // 一旦进入判断，说明i不是质数，此时进行循环没有意义，可以使用break退出当前j循环
+            break;
+          }
+        }
+        if (flag) {
+          console.log(i);
+        }
+      }
+      console.timeEnd('test');
+    </script>
+    <style>
+      span {
+        display: inline-block;
+        width: 80px;
+      }
+    </style>
+  </head>
+  <body></body>
+</html>
