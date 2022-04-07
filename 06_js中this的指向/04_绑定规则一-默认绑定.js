@@ -4,24 +4,24 @@
 //   console.log(this)
 // }
 
-// foo()
+// foo() // window
 
 // 2.案例二:
-// function foo1() {
-//   console.log(this)
-// }
+function foo1() {
+  console.log(this)
+}
 
-// function foo2() {
-//   console.log(this)
-//   foo1()
-// }
+function foo2() {
+  console.log(this)
+  foo1()
+}
 
-// function foo3() {
-//   console.log(this)
-//   foo2()
-// }
+function foo3() {
+  console.log(this)
+  foo2()
+}
 
-// foo3()
+foo3()  // window window window
 
 
 // 3.案例三:
