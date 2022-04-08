@@ -23,6 +23,7 @@ var sum2 = x => y => z => {
 
 console.log(sum2(10)(20)(30))
 
+// 再次简化
 var sum3 = x => y => z => x + y + z
 console.log(sum3(10)(20)(30))
 
