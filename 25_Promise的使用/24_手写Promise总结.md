@@ -2,9 +2,7 @@
 
 ## 一. Promise规范
 
-https://promisesaplus.com/
-
-
+<https://promisesaplus.com/>
 
 ## 二. Promise类设计
 
@@ -16,14 +14,12 @@ class HYPromise {}
 function HYPromise() {}
 ```
 
-
-
 ## 三. 构造函数的规划
 
 ```js
 class HYPromise {
   constructor(executor) {
-   	// 定义状态
+    // 定义状态
     // 定义resolve、reject回调
     // resolve执行微任务队列：改变状态、获取value、then传入执行成功回调
     // reject执行微任务队列：改变状态、获取reason、then传入执行失败回调
@@ -33,8 +29,6 @@ class HYPromise {
   }
 }
 ```
-
-
 
 ## 四. then方法的实现
 
@@ -49,14 +43,12 @@ class HYPromise {
     // 2.返回Promise resolve/reject
     
     // 3.判断之前的promise状态是否确定
-    // onFulfilled/onRejected直接执行（捕获异常）
+    // onFulfilled/onRejected直接执行(捕获异常)
     
     // 4.添加到数组中push(() => { 执行 onFulfilled/onRejected 直接执行代码})
   }
 }
 ```
-
-
 
 ## 五. catch方法
 
@@ -68,8 +60,6 @@ class HYPromise {
 }
 ```
 
-
-
 ## 六. finally
 
 ```js
@@ -80,11 +70,7 @@ class HYPromise {
 }
 ```
 
-
-
 ## 七. resolve/reject
-
-
 
 ## 八. all/allSettled
 
@@ -98,8 +84,6 @@ all：
 allSettled：
 
 * 情况：所有都有结果，并且一定执行resolve
-
-
 
 ## 九.race/any
 

@@ -7,23 +7,23 @@
     <title>Document</title>
   </head>
   <body>
-    <!-- 判断一个数字是否质数：只有两个正因数（1和自己）的自然数即为质数 -->
+    <!-- 判断一个数字是否质数：只有两个正因数(1和自己)的自然数即为质数 -->
     <script>
-      var num = prompt('输入一个大于一的数字')
+      var num = prompt("输入一个大于一的数字");
       if (num <= 1) {
-        alert('您输入的数字不合法')
+        alert("您输入的数字不合法");
       } else {
-        var flag = true
+        var flag = true;
         for (var i = 2; i < num; i++) {
           if (num % i === 0) {
-            flag = false
+            flag = false;
           }
         }
       }
       if (flag) {
-        alert(num + '是质数')
+        alert(num + "是质数");
       } else {
-        alert(num + '不是质数')
+        alert(num + "不是质数");
       }
     </script>
   </body>

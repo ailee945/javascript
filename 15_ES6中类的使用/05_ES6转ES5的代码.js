@@ -1,15 +1,16 @@
-class Person {
-  constructor(name, age) {
-    this.name = name
-    this.age = age
-  }
+// class Person {
+//   constructor(name, age) {
+//     this.name = name
+//     this.age = age
+//   }
 
-  eating() {
-    console.log(this.name + " eating~")
-  }
-}
+//   eating() {
+//     console.log(this.name + " eating~")
+//   }
+// }
 
 // babel转换
+
 "use strict";
 
 function _classCallCheck(instance, Constructor) {
@@ -37,6 +38,8 @@ function _createClass(Constructor, protoProps, staticProps) {
 // /*#__PURE__*/ 纯函数
 // webpack 压缩 tree-shaking
 // 这个函数没副作用
+// 立即执行函数 避免变量名冲突
+
 var Person = /*#__PURE__*/ (function () {
   function Person(name, age) {
     this.name = name;

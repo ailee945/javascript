@@ -25,6 +25,7 @@
 // }
 
 // babel转换后的代码
+
 "use strict";
 
 function _typeof(obj) {

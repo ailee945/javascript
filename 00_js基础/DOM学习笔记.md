@@ -61,13 +61,13 @@
    - `parentNode`父节点
    - `previousSibling`前一个兄弟节点
    - `nextSibling`下一个兄弟节点
-   
+
 4. DOM查询的剩余方法
 
    - `body`document的一个属性`var body = document.body`
    - `document.documentElement`就是html
    - `document.getElementsByClassName`
-   - `document.querySelector('.box')`根据css选择器获取节点对象（只会返回第一个）
+   - `document.querySelector('.box')`根据css选择器获取节点对象(只会返回第一个)
    - `document.querySelectorAll()`与上面的类似，返回的是符合条件的所有元素数组集合
 
 ## 对象的增删改方法
@@ -82,7 +82,7 @@
 
 ## 使用DOM操作css
 
-1. 修改内联样式（优先级仅次于!important）
+1. 修改内联样式(优先级仅次于!important)
 
    - `元素.style.样式名 = ''`(样式名要写成驼峰命名法)
    - 通过style设置和读取的都是内联样式。
@@ -107,9 +107,9 @@
    - `element.clientWidth` `element.clientHeigh`可见宽度和可见高度(包括内容区和内边距)--只读属性
    - `offsetWidth` `offsetHeight` 包括内容区，内边距、边框--只读属性
    - `offsetParent`定位父元素--距离当前元素最近的开启定位的祖先元素，没有则返回body
-   - `offsetLeft` `offsetTop`当前元素距离其定位父元素的水平（垂直）偏移值
+   - `offsetLeft` `offsetTop`当前元素距离其定位父元素的水平(垂直)偏移值
    - `scrollWidth` `scrollHeight`滚动宽度、滚动高度
-   - `scrolLeft` `scrollTop`滚动条滚动水平（垂直）滚动的距离
+   - `scrolLeft` `scrollTop`滚动条滚动水平(垂直)滚动的距离
    - `scrollHeight-scrollTop`用于验证阅读协议
 
 ## 事件
@@ -126,15 +126,15 @@
    - `clientX`鼠标相对于可见区域的X坐标
    - `clientY`鼠标相对于可见区域的Y坐标
    - `pageX`鼠标相对于当前页面的X坐标
-   - `pageY`鼠标相对于当前页面的Y坐标（ie8+)
+   - `pageY`鼠标相对于当前页面的Y坐标(ie8+)
 
 ## 事件的绑定
 
-- `object.addEventListener()`绑定事件的方法（可以同时为一个元素的相同事件绑定多个响应函数）（ie8+）
+- `object.addEventListener()`绑定事件的方法(可以同时为一个元素的相同事件绑定多个响应函数)(ie8+)
   - 参数1：事件的字符串，不带on
   - 参数2：回调函数
   - 参数3：是否在捕获阶段触发函数，布尔值，一般都传入false
-- `attachEvent()`(ie5-ie8)（可以同时为一个元素的相同事件绑定多个响应函数），不同的是执行顺序和addEventListener()执行顺序相反
+- `attachEvent()`(ie5-ie8)(可以同时为一个元素的相同事件绑定多个响应函数)，不同的是执行顺序和addEventListener()执行顺序相反
   - 参数1：事件的字符串，带on
   - 参数2：回调函数
 
