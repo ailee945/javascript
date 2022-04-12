@@ -1,15 +1,15 @@
 Promise.resolve().then(() => {
   console.log(0);
-  // 1.直接return一个值 相当于resolve(4)
+  // 1.直接return一个值 相当于resolve(4)
   // return 4
 
   // 2.return thenable的值
-  return {
-    then: function(resolve) {
-      // 大量的计算
-      resolve(4)
-    }
-  }
+  // return {
+  //   then: function(resolve) {
+  //     // 大量的计算
+  //     resolve(4)
+  //   }
+  // }
 
   // 3.return Promise
   // 不是普通的值, 多加一次微任务
